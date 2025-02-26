@@ -1,18 +1,20 @@
-import java.util.Date;
+import java.lang.reflect.Array;
+import java.util.*;
 
 public class Book{
-    int bookId;
-    String name;
-    String description;
-    String[] genre;
-    String author;
-    Boolean issueStatus;
-    Date issueDate; // last issue Date
-    int issuePeriod; // issue period in days
+    private final int bookId;
+    private String name;
+    private String description;
+    private String[] genre;
+    private String author;
+    private int copies;
+
+    private ArrayList<IssueDetails> issueDate;
 
     Book(int bookId, String name){
         this.bookId = bookId;
         this.name = name;
+        copies = 1;
     }
     Book(int bookId, String name, String description, String[] genre, String author){
         this.bookId = bookId;
@@ -20,9 +22,20 @@ public class Book{
         this.description = description;
         this.genre = genre;
         this.author = author;
+        copies = 1;
     }
-    public void issueBook(Date issueDate, int issuePeriod){
-        this.issueDate = issueDate;
-        this.issuePeriod = issuePeriod;
+
+//    public void editCopiesOfBook(int copies){
+//        if(copies >= 0){
+//            this.copies = copies;
+//        }
+//        else copies = 1;
+//    }
+
+    public int getBookId(){
+        return bookId;
+    }
+    public String getBookTitle(){
+        return name;
     }
 }

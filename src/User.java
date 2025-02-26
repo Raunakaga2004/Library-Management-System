@@ -1,13 +1,13 @@
 import java.util.ArrayList;
 
 public class User {
-    int userId;
-    String firstname;
-    String lastname;
-    int age;
-    ArrayList<Book> issuedBooks;
-    String phoneNumber;
-    String mailId;
+    private int userId;
+    private String firstname;
+    private String lastname;
+    private int age;
+    private ArrayList<Book> issuedBooks;
+    private String phoneNumber;
+    private String mailId;
 
     User(int userId, String firstname, String lastname, int age, String phoneNumber, String mailId){
         this.userId = userId;
