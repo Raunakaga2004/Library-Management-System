@@ -1,6 +1,7 @@
 import java.util.Date;
 
 public class Book{
+    int bookId;
     String name;
     String description;
     String[] genre;
@@ -9,10 +10,12 @@ public class Book{
     Date issueDate; // last issue Date
     int issuePeriod; // issue period in days
 
-    Book(String name){
+    Book(int bookId, String name){
+        this.bookId = bookId;
         this.name = name;
     }
-    Book(String name, String description, String[] genre, String author){
+    Book(int bookId, String name, String description, String[] genre, String author){
+        this.bookId = bookId;
         this.name = name;
         this.description = description;
         this.genre = genre;
